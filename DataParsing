@@ -5,14 +5,13 @@ TotalforBernie = sum(unique(columbus[c(grep("Sanders",columbus$V1),grep("Bernie"
 TotalforHillary = sum(unique(columbus[c(grep("Hillary",columbus$V1),grep("Clinton",columbus$V1), grep("ImWithHer", columbus$V1)),]$V2))
 TotalforTrump = sum(unique(columbus[c(grep("Donald",columbus$V1),grep("Trump",columbus$V1), grep("MakeAmericaGreatAgain", columbus$V1)),]$V2))
 TotalforCruz = sum(unique(columbus[c(grep("Ted",columbus$V1),grep("Cruz",columbus$V1), grep("CruzCrew", columbus$V1)),]$V2))
-TotalforRubio = sum(unique(columbus[c(grep("Marco",columbus$V1),grep("Rubio",columbus$V1)),]$V2))
 TotalforKasich = sum(unique(columbus[grep("Kasich",columbus$V1),]$V2))
-tallys = c(TotalforCruz,TotalforKasich, TotalforRubio, TotalforTrump, TotalforHillary, TotalforBernie)
-colors = c("red", "red", "red", "red", "blue", "blue")
+tallys = c(TotalforCruz,TotalforKasich, TotalforTrump, TotalforHillary, TotalforBernie)
+colors = c("red", "red", "red", "blue", "blue")
 barplot(tallys, main = "Ohio Primary", ylab = "Number of Mentions", xlab = "Canidates", names.arg = c("Cruz", "Kasich", "Rubio", "Trump", "Clinton", "Sanders"), col = colors)
 oh = matrix(tallys)
 colnames(oh) <- "Total Mentions"
-rownames(oh) <- c("Cruz", "Kasich", "Rubio", "Trump", "Clinton", "Sanders")
+rownames(oh) <- c("Cruz", "Kasich", "Trump", "Clinton", "Sanders")
 oh
 totaltweetsoh = columbus[grep("statuses_count", columbus$V1), ]$V2
 
@@ -21,14 +20,13 @@ TotalforBernie2 = sum(unique(chicago[c(grep("Sanders",chicago$V1),grep("Bernie",
 TotalforHillary2 = sum(unique(chicago[c(grep("Hillary",chicago$V1),grep("Clinton",chicago$V1), grep("ImWithHer", chicago$V1)),]$V2))
 TotalforTrump2 = sum(unique(chicago[c(grep("Donald",chicago$V1),grep("Trump",chicago$V1), grep("MakeAmericaGreatAgain", chicago$V1)),]$V2))
 TotalforCruz2 = sum(unique(chicago[c(grep("Ted",chicago$V1),grep("Cruz",chicago$V1), grep("CruzCrew", chicago$V1)),]$V2))
-TotalforRubio2 = sum(unique(chicago[c(grep("Marco",chicago$V1),grep("Rubio",chicago$V1)),]$V2))
 TotalforKasich2 = sum(unique(chicago[grep("Kasich",chicago$V1),]$V2))
-tallys2 = c(TotalforCruz2,TotalforKasich2, TotalforRubio2, TotalforTrump2, TotalforHillary2, TotalforBernie2)
-colors = c("red", "red", "red", "red", "blue", "blue")
-barplot(tallys2, main = "Illinois Primary", ylab = "Number of Mentions", xlab = "Canidates", names.arg = c("Cruz", "Kasich", "Rubio", "Trump", "Clinton", "Sanders"), col = colors)
+tallys2 = c(TotalforCruz2,TotalforKasich2, TotalforTrump2, TotalforHillary2, TotalforBernie2)
+colors = c("red", "red","red", "blue", "blue")
+barplot(tallys2, main = "Illinois Primary", ylab = "Number of Mentions", xlab = "Canidates", names.arg = c("Cruz", "Kasich", "Trump", "Clinton", "Sanders"), col = colors)
 il = matrix(tallys2)
 colnames(il) <- "Total Mentions"
-rownames(il) <- c("Cruz", "Kasich", "Rubio", "Trump", "Clinton", "Sanders")
+rownames(il) <- c("Cruz", "Kasich","Trump", "Clinton", "Sanders")
 il
 totaltweetsil = chicago[grep("statuses_count", chicago$V1), ]$V2
 
@@ -37,14 +35,13 @@ TotalforBernie3 = sum(unique(jacksonville[c(grep("Sanders",jacksonville$V1),grep
 TotalforHillary3 = sum(unique(jacksonville[c(grep("Hillary",jacksonville$V1),grep("Clinton",jacksonville$V1), grep("ImWithHer", jacksonville$V1)),]$V2))
 TotalforTrump3 = sum(unique(jacksonville[c(grep("Donald",jacksonville$V1),grep("Trump",jacksonville$V1), grep("MakeAmericaGreatAgain", jacksonville$V1)),]$V2))
 TotalforCruz3 = sum(unique(jacksonville[c(grep("Ted",jacksonville$V1),grep("Cruz",jacksonville$V1), grep("CruzCrew", jacksonville$V1)),]$V2))
-TotalforRubio3 = sum(unique(jacksonville[c(grep("Marco",jacksonville$V1),grep("Rubio",jacksonville$V1)),]$V2))
 TotalforKasich3 = sum(unique(jacksonville[grep("Kasich",jacksonville$V1),]$V2))
-tallys3 = c(TotalforCruz3,TotalforKasich3, TotalforRubio3, TotalforTrump3, TotalforHillary3, TotalforBernie3)
-colors = c("red", "red", "red", "red", "blue", "blue")
-barplot(tallys3, main = "Florida Primary", ylab = "Number of Mentions", xlab = "Canidates", names.arg = c("Cruz", "Kasich", "Rubio", "Trump", "Clinton", "Sanders"), col = colors)
+tallys3 = c(TotalforCruz3,TotalforKasich3, TotalforTrump3, TotalforHillary3, TotalforBernie3)
+colors = c("red", "red", "red", "blue", "blue")
+barplot(tallys3, main = "Florida Primary", ylab = "Number of Mentions", xlab = "Canidates", names.arg = c("Cruz", "Kasich","Trump", "Clinton", "Sanders"), col = colors)
 fl = matrix(tallys3)
 colnames(fl) <- "Total Mentions"
-rownames(fl) <- c("Cruz", "Kasich", "Rubio", "Trump", "Clinton", "Sanders")
+rownames(fl) <- c("Cruz", "Kasich","Trump", "Clinton", "Sanders")
 fl
 totaltweetsfl = jacksonville[grep("statuses_count", jacksonville$V1), ]$V2
 
@@ -53,7 +50,6 @@ TotalforBernie4 = sum(unique(phoenix[c(grep("Sanders",phoenix$V1),grep("Bernie",
 TotalforHillary4 = sum(unique(phoenix[c(grep("Hillary",phoenix$V1),grep("Clinton",phoenix$V1), grep("ImWithHer", phoenix$V1)),]$V2))
 TotalforTrump4 = sum(unique(phoenix[c(grep("Donald",phoenix$V1),grep("Trump", phoenix$V1), grep("MakeAmericaGreatAgain", phoenix$V1)),]$V2))
 TotalforCruz4 = sum(unique(phoenix[c(grep("Ted",phoenix$V1),grep("Cruz",phoenix$V1), grep("CruzCrew", phoenix$V1)),]$V2))
-TotalforRubio4 = sum(unique(phoenix[c(grep("Marco",phoenix$V1),grep("Rubio",phoenix$V1)),]$V2))
 TotalforKasich4 = sum(unique(phoenix[grep("Kasich",phoenix$V1),]$V2))
 tallys4 = c(TotalforCruz4,TotalforKasich4, TotalforTrump4, TotalforHillary4, TotalforBernie4)
 colors2 = c("red", "red", "red", "blue", "blue")
@@ -69,7 +65,6 @@ TotalforBernie5 = sum(unique(saltlakecity[c(grep("Sanders",saltlakecity$V1),grep
 TotalforHillary5 = sum(unique(saltlakecity[c(grep("Hillary",saltlakecity$V1),grep("Clinton",saltlakecity$V1), grep("ImWithHer", saltlakecity$V1)),]$V2))
 TotalforTrump5 = sum(unique(saltlakecity[c(grep("Donald",saltlakecity$V1),grep("Trump", saltlakecity$V1), grep("MakeAmericaGreatAgain", saltlakecity$V1)),]$V2))
 TotalforCruz5 = sum(unique(saltlakecity[c(grep("Ted",saltlakecity$V1),grep("Cruz",saltlakecity$V1), grep("CruzCrew", saltlakecity$V1)),]$V2))
-TotalforRubio5 = sum(unique(saltlakecity[c(grep("Marco",saltlakecity$V1),grep("Rubio",saltlakecity$V1)),]$V2))
 TotalforKasich5 = sum(unique(saltlakecity[grep("Kasich",saltlakecity$V1),]$V2))
 tallys5 = c(TotalforCruz5,TotalforKasich5,TotalforTrump5, TotalforHillary5, TotalforBernie5)
 colors2 = c("red", "red", "red","blue", "blue")
@@ -95,12 +90,28 @@ rownames(wi) <- c("Cruz", "Kasich","Trump", "Clinton", "Sanders")
 wi
 totaltweetswi = milwaukee[grep("statuses_count", milwaukee$V1), ]$V2
 
+## New York Primary ##
+TotalforBernie7 = sum(unique(newyork[c(grep("Sanders",newyork$V1),grep("Bernie",newyork$V1), grep("FeelTheBern", newyork$V1)),]$V2))
+TotalforHillary7 = sum(unique(newyork[c(grep("Hillary",newyork$V1),grep("Clinton", newyork$V1), grep("ImWithHer", newyork$V1)),]$V2))
+TotalforTrump7 = sum(unique(newyork[c(grep("Donald", newyork$V1),grep("Trump", newyork$V1), grep("MakeAmericaGreatAgain", newyork$V1)),]$V2))
+TotalforCruz7 = sum(unique(newyork[c(grep("Ted",newyork$V1),grep("Cruz",newyork$V1), grep("CruzCrew", newyork$V1)),]$V2))
+TotalforKasich7 = sum(unique(newyork[grep("Kasich",newyork$V1),]$V2))
+tallys7 = c(TotalforCruz7,TotalforKasich7,TotalforTrump7, TotalforHillary7, TotalforBernie7)
+colors2 = c("red", "red", "red","blue", "blue")
+barplot(tallys7, main = "New York Primary", ylab = "Number of Mentions", xlab = "Canidates", 
+        names.arg = c("Cruz", "Kasich", "Trump", "Clinton", "Sanders"), col = colors2)
+ny = matrix(tallys7)
+colnames(ny) <- "Total Mentions"
+rownames(ny) <- c("Cruz", "Kasich","Trump", "Clinton", "Sanders")
+ny
+totaltweetsny = newyork[grep("statuses_count", newyork$V1), ]$V2
+
 ## Total Mentions  ##
-TotalTed = sum(TotalforCruz, TotalforCruz2, TotalforCruz3, TotalforCruz4, TotalforCruz5, TotalforCruz6)
-TotalTrump = sum(TotalforTrump, TotalforTrump2, TotalforTrump3, TotalforTrump4, TotalforTrump5, TotalforCruz6)
-TotalKasich = sum(TotalforKasich, TotalforKasich2, TotalforKasich3, TotalforKasich4, TotalforKasich5, TotalforKasich6)
-TotalBerns = sum(TotalforBernie, TotalforBernie2, TotalforBernie3, TotalforBernie4, TotalforBernie5, TotalforBernie6)
-TotalHills = sum(TotalforHillary, TotalforHillary2, TotalforHillary3, TotalforHillary4, TotalforHillary5, TotalforHillary6)
+TotalTed = sum(TotalforCruz, TotalforCruz2, TotalforCruz3, TotalforCruz4, TotalforCruz5, TotalforCruz6, TotalforCruz7)
+TotalTrump = sum(TotalforTrump, TotalforTrump2, TotalforTrump3, TotalforTrump4, TotalforTrump5, TotalforTrump6, TotalforTrump7)
+TotalKasich = sum(TotalforKasich, TotalforKasich2, TotalforKasich3, TotalforKasich4, TotalforKasich5, TotalforKasich6, TotalforKasich7)
+TotalBerns = sum(TotalforBernie, TotalforBernie2, TotalforBernie3, TotalforBernie4, TotalforBernie5, TotalforBernie6, TotalforBernie7)
+TotalHills = sum(TotalforHillary, TotalforHillary2, TotalforHillary3, TotalforHillary4, TotalforHillary5, TotalforHillary6, TotalforHillary7)
 count = c(TotalTed, TotalKasich,TotalTrump, TotalHills, TotalBerns)
 barplot(count, col = colors2, main = "Total Mentions",  xlab = "Canidates", ylab = "Number of Mentions", names.arg = c("Cruz", "Kasich", "Trump", "Clinton", "Sanders"))
 
